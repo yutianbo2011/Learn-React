@@ -1,0 +1,75 @@
+.List {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    width: 280px;
+}
+
+.ListItem {
+    font-size: 15px;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid #521751;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+    transition-property: font-size;
+    transition-duration: 0.2s; 
+    transition-timing-function: ease-in;
+} 
+
+.ListItem:hover{
+    font-size: 20px;
+}
+
+.ListItem:active {
+    background-color: #ccc;
+    opacity: 0;
+}
+
+.AnimationItems-enter-active{
+    animation: addList 0.4s ease-out forwards;
+}
+
+.AnimationItems-exit {
+    opacity: 1;
+    background-color: red;
+}
+
+.AnimationItems-exit-active {
+    opacity: 0;
+    transition: all 0.3s ease-out;
+}
+
+@keyframes addList{
+    0%{
+        background-color:green;
+
+    }
+    50%{
+        opacity: 1;
+        background-color: green;
+
+    }
+    100%{
+        opacity: 1;
+        background-color: white;
+    }
+}
+
+@keyframes removeList{
+    0%{
+        opacity: 1;
+        background-color: tomato;
+
+    }
+    50%{
+        opacity: 0.5;
+        background-color: tomato;
+    }
+    100%{
+        opacity: 0;
+    }
+}
